@@ -40,6 +40,7 @@ jobs:
       - name: Install LLVM and Ninja
         run: |
           scoop install ninja
+          scoop install 7zip
           scoop install llvm@19.1.7
           Join-Path (Resolve-Path ~).Path "scoop\apps\llvm\current\bin" >> $Env:GITHUB_PATH
 
