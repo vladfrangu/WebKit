@@ -16,7 +16,7 @@ if ($env:VSINSTALLDIR -eq $null) {
     } 
     Push-Location $vsDir
     try {
-        . (Join-Path -Path $vsDir.FullName -ChildPath "Common7\Tools\Launch-VsDevShell.ps1") -Arch amd64 -HostArch amd64
+        . (Join-Path -Path $vsDir.FullName -ChildPath "Common7\Tools\Launch-VsDevShell.ps1") -Arch arm64 -HostArch amd64
     }
     finally { Pop-Location }
 }
