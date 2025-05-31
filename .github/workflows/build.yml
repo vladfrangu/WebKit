@@ -5,6 +5,8 @@ env:
 
 # Controls when the workflow will run
 on:
+  push:
+
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
     inputs:
@@ -40,8 +42,6 @@ jobs:
       - name: Install LLVM and Ninja
         run: |
           scoop install ninja
-          scoop install 7zip
-          scoop install llvm@19.1.7
           Join-Path (Resolve-Path ~).Path "scoop\apps\llvm\current\bin" >> $Env:GITHUB_PATH
 
       - uses: cygwin/cygwin-install-action@006ad0b0946ca6d0a3ea2d4437677fa767392401
